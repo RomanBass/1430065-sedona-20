@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Роман](https://up.htmlacademy.ru/adaptive/20/user/1430065).
-* Наставник: [Михаил Савотиков](https://htmlacademy.ru/profile/id98316).
+* Студент: [Роман Катровский](https://up.htmlacademy.ru/adaptive/20/user/1430065).
+* Наставник: [Дмитрий Могиль](https://htmlacademy.ru/profile/id398003).
 
 ---
 
