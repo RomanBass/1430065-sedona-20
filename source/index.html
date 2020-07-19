@@ -9,59 +9,106 @@
       <a class="page-header__logo">
         <img src="https://via.placeholder.com/102x84" width="102" height="84" alt="Город Седона">
       </a>
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>
+      <nav class="page-header__main-navigation main-navigation">
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item main-navigation__item--active">
+            <a class="main-navigation__link">
               Главная
             </a>
           </li>
-          <li class="site-list__item">
-            <a href="photo.html">
+          <li class="main-navigation__item">
+            <a href="photo.html" class="main-navigation__link">
               Фото и видео
             </a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">
+          <li class="main-navigation__item">
+            <a href="form.html" class="main-navigation__link">
               Форма отзыва
             </a>
           </li>
-          <li class="site-list__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">
+          <li class="main-navigation__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="main-navigation__link">
               HTML Academy
             </a>
           </li>
         </ul>
       </nav>
-      <button class="main-nav__toggle" type="button">
+      <button class="page-header__main-navigation-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <img src="https://via.placeholder.com/320x389" width="320" height="389" alt="Добро пожаловать в безумно прекрасную Седону! Гранд-Каньон отдыхает!">
+      <img class="page-header__main-image main-image--index" src="https://via.placeholder.com/320x389" width="320" height="389" alt="Добро пожаловать в прекрасную Седону! Гранд-Каньон отдыхает!">
     </header>
     <main class="main-page">
-    <h1 class="main-page__title title-h1">
+    <h1 class="visually-hidden">Седона, город для туризма</h1>
+    <h2 class="main-page__title">
       Седона-небольшой городок в аризоне, заслуживающий большего!
-    </h1>
+    </h2>
+    <p class="main-page__info">
+      Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!
+    </p>
     <section class="reasons">
-      <h3 class="reasons__title title-h3">
-        Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!
-      </h3>
-      <div class="reasons__item">
-        <h2 class="reasons-item__title">Настоящий городок</h2>
-        <p class="reasons-item__number">-№1-</p>
-        <p class="reasons-item__feature">Седона не аттракцион для туристов, там течет своя жизнь</p>
-        <img src="https://via.placeholder.com/320x260" width="320" height="260" alt="Фото с видом Седоны, отель на фоне гор">
-        <ul>
+      <div class="reasons__item item">
+        <h2 class="item__title">Настоящий городок</h2>
+        <p class="item__number">-№1-</p>
+        <p class="item__info">Седона не аттракцион для туристов, там течет своя жизнь</p>
+        <img class="item__image" src="https://via.placeholder.com/320x260" width="320" height="260" alt="Фото с видом Седоны, отель на фоне гор">
+        <ul class="item__features features">
+          <li class="features__unit features-unit--housing">
+            <h3 class="features__title">Жильё</h3>
+            <p class="features__info">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li class="features__unit features__unit--souvenir">
+            <h3 class="features__title">Сувениры</h3>
+            <p class="features__info">Не только китайского, но и местного производства!</p>
+          </li>
+          <li class="features__unit features__unit--food">
+            <h3 class="features__title">Еда</h3>
+            <p class="features__info">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </li>
         </ul>
-
-
       </div>
-
-
-
-
+      <div class="reasons__item item">
+        <h2 class="item__title">Там есть мост дьявола</h2>
+        <p class="item__number">-№2-</p>
+        <p class="item__info">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+        <img class="item__image" src="https://via.placeholder.com/320x260" width="320" height="260" alt="Фото с видом Моста Дьявола">
+      </div>
+      <div class="reasons__item item">
+        <h2 class="item__title">Небольшая площадь</h2>
+        <p class="item__number">-№3-</p>
+        <p class="item__info">Все интересные места находятся очень близко</p>
+      </div>
+      <div class="reasons__item item">
+        <h2 class="item__title">Красивая дорога</h2>
+        <p class="item__number">-№4-</p>
+        <p class="item__info">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      </div>
+      <div class="reasons__item item">
+        <h2 class="item__title">Мало туристов</h2>
+        <p class="item__number">-№5-</p>
+        <p class="item__info">Большинство едет в Гранд Каньон и толпится там</p>
+      </div>
     </section>
     </main>
-
+    <footer class="page-footer">
+      <h2 class="page-footer__title">#Visitsedona</h2>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link-twitter" href="https://twitter.com/htmlacademy_ru">Твиттер</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link-youtube" href="https://www.youtube.com/user/htmlacademyru">Ютюб</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
   </body>
 </html>
