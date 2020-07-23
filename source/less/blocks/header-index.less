@@ -1,12 +1,30 @@
-.page-header {
+.page-header--index {
   min-height: 668px;
-  background-image: url(../../img/bg-back-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: -200px 280px;
+  background:
+  url(../../img/text-sedona-index.svg) 0px 300px no-repeat,
+  url(../../img/bg-back-mobile@1x.jpg) -200px 280px no-repeat;
+  background-size: 100%, unset;
 }
 
 .page-header__logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.logo-toggle {
+  position: relative;
+}
+
+.page-header__navigation-toggle {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  right: 17px;
+  top: 17px;
+  background-color: transparent;
+  background-image: url(../../img/icon-menu.svg);
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer
 }
