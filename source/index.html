@@ -3,12 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="https://via.placeholder.com/102x84" width="102" height="84" alt="Город Седона">
-      </a>
       <nav class="page-header__main-navigation main-navigation">
         <ul class="main-navigation__list">
           <li class="main-navigation__item main-navigation__item--active">
@@ -32,11 +30,14 @@
             </a>
           </li>
         </ul>
-        <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+
       </nav>
-      <img class="page-header__main-image page-header__main-image--index" src="https://via.placeholder.com/320x389" width="320" height="389" alt="Пейзаж в окрестности города Седона со приглашением. Добро пожаловать в прекрасную Седону! Гранд-Каньон отдыхает!">
+      <a >
+        <img class="page-header__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Город Седона">
+      </a>
+      <button class="main-navigation__toggle" type="button">
+          <span>Открыть меню</span>
+        </button>
     </header>
     <main class="page-main">
     <h1 class="visually-hidden">Седона, город для туризма</h1>
@@ -46,10 +47,12 @@
     <section class="reasons">
       <h2 class="reasons__title">Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</h2>
       <div class="reasons__item reason">
-        <h2 class="reason__title">Настоящий городок</h2>
-        <p class="reason__number">-№1-</p>
-        <p class="reason__info">Седона не аттракцион для туристов, там течет своя жизнь</p>
-        <img class="reason__image" src="https://via.placeholder.com/320x260" width="320" height="260" alt="Фото с видом Седоны, отель на фоне гор">
+        <div class="reason__header reason__header--blue-first">
+          <h2 class="reason__title--blue">Настоящий городок</h2>
+          <p class="reason__number--blue">- №1 -</p>
+          <p class="reason__info--blue">Седона не аттракцион для туристов, там течет своя жизнь</p>
+        </div>
+        <img class="reason__image" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Фото с видом Седоны, отель на фоне гор">
         <ul class="reason__features features">
           <li class="features__item features__item--housing">
             <h3 class="feature__title">Жильё</h3>
@@ -66,25 +69,33 @@
         </ul>
       </div>
       <div class="reasons__item reason">
-        <h2 class="reason__title">Там есть мост дьявола</h2>
-        <p class="reason__number">-№2-</p>
-        <p class="reason__info">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-        <img class="reason__image" src="https://via.placeholder.com/320x260" width="320" height="260" alt="Фото с видом Моста Дьявола">
+        <div class="reason__header reason__header--blue">
+          <h2 class="reason__title--blue">Там есть мост дьявола</h2>
+          <p class="reason__number--blue">- №2 -</p>
+          <p class="reason__info--blue">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+        </div>
+        <img class="reason__image" src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Фото с видом Моста Дьявола">
       </div>
       <div class="reasons__item reason">
-        <h2 class="reason__title">Небольшая площадь</h2>
-        <p class="reason__number">-№3-</p>
-        <p class="reason__info">Все интересные места находятся очень близко</p>
+        <div class="reason__header reason__header--grey">
+          <h2 class="reason__title--grey">Небольшая площадь</h2>
+          <p class="reason__number--grey">- №3 -</p>
+          <p class="reason__info--grey">Все интересные места находятся очень близко</p>
+        </div>
       </div>
       <div class="reasons__item reason">
-        <h2 class="reason__title">Красивая дорога</h2>
-        <p class="reason__number">-№4-</p>
-        <p class="reason__info">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <div class="reason__header reason__header--grey">
+          <h2 class="reason__title--grey">Красивая дорога</h2>
+          <p class="reason__number--grey">- №4 -</p>
+          <p class="reason__info--grey">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
       </div>
       <div class="reasons__item reason">
-        <h2 class="reason__title">Мало туристов</h2>
-        <p class="reason__number">-№5-</p>
-        <p class="reason__info">Большинство едет в Гранд Каньон и толпится там</p>
+        <div class="reason__header reason__header--grey">
+          <h2 class="reason__title--grey">Мало туристов</h2>
+          <p class="reason__number--grey">- №5 -</p>
+          <p class="reason__info--grey">Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
       </div>
     </section>
     </main>
@@ -93,13 +104,15 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link-twitter" href="https://twitter.com/htmlacademy_ru">Твиттер</a>
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">
+            </a>
+
           </li>
           <li class="social__item">
-            <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link-youtube" href="https://www.youtube.com/user/htmlacademyru">Ютюб</a>
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Ютюб</a>
           </li>
         </ul>
       </div>
