@@ -8,16 +8,26 @@
 }
 
 .reason__header--blue-first {
-  padding-top: 30px;
-  min-height: 211px;
+  position: relative;
+  padding-top: 60px;
+  min-height: 171px;
   background-color: #81B3D2;
   text-align: center;
   text-transform: uppercase;
+  z-index: 0;
+}
+
+.reason__header--blue-first:before {
+  position: absolute;
+  content: url(../img/bg-triangle.svg);
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 
 .reason__header--blue {
   padding-top: 30px;
-  min-height: 191px;
+  min-height: 171px;
   background-color: #81B3D2;
   text-align: center;
   text-transform: uppercase;
@@ -42,7 +52,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .reason__info--blue {

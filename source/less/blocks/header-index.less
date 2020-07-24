@@ -1,9 +1,18 @@
 .page-header--index {
+  position: relative;
   min-height: 668px;
-  background:
-  url(../../img/text-sedona-index.svg) 0px 300px no-repeat,
-  url(../../img/bg-back-mobile@1x.jpg) -200px 280px no-repeat;
-  background-size: 100%, unset;
+  background: url(../img/text-sedona-index.svg) center 370px no-repeat,
+  url(../img/bg-back-mobile@1x.jpg) -200px 280px no-repeat;
+  background-size: 88%, auto;
+  z-index: 0;
+}
+
+.page-header--index:before {
+  position: absolute;
+  content: url(../img/bg-intro-triangle-mobile.svg);
+  bottom: -5px;
+  left: 0px;
+  z-index: 1;
 }
 
 .page-header__logo {
