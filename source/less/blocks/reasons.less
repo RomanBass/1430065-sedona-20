@@ -9,7 +9,7 @@
 
 .reason__header--blue-first {
   position: relative;
-  padding-top: 60px;
+  padding-top: 55px;
   min-height: 171px;
   background-color: #81B3D2;
   text-align: center;
@@ -17,10 +17,10 @@
   z-index: 0;
 }
 
-.reason__header--blue-first:before {
+.reason__header--blue-first::before {
   position: absolute;
   content: url(../img/bg-triangle.svg);
-  top: 0px;
+  top: -1px;
   left: 0px;
   z-index: 1;
 }
@@ -46,9 +46,12 @@
   font-size: 18px;
   line-height: 26px;
   color: #FFFFFF;
+  margin-bottom: 0;
 }
 
 .reason__number--blue {
+  margin-top: 12px;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -60,6 +63,10 @@
   font-size: 14px;
   line-height: 21px;
   color: #FFFFFF;
+}
+
+.reason__image {
+  display: block;
 }
 
 .reason__title--grey {

@@ -2,17 +2,21 @@
   position: relative;
   min-height: 668px;
   margin-bottom: 32px;
-  background: url(../img/text-sedona-index.svg) center 370px no-repeat,
-  url(../img/bg-back-mobile@1x.jpg) -200px 280px no-repeat;
+  background: url(../img/text-sedona-index.svg) center 369px no-repeat,
+  url(../img/bg-back-mobile@1x.jpg) -223px 279px no-repeat;
   background-size: 88%, auto;
   z-index: 0;
 }
 
-.page-header--index:before {
+.page-header--index::before {
   position: absolute;
-  content: url(../img/bg-intro-triangle-mobile.svg);
-  bottom: -5px;
-  left: 0px;
+  content: "";
+  background-image: url(../img/bg-intro-triangle-mobile.svg);
+  background-size: cover;
+  height: 28px;
+  bottom: 0px;
+  left: -11px;
+  right:0px;
   z-index: 1;
 }
 
@@ -22,11 +26,11 @@
   margin-bottom: 32px;
   background:
   url(../img/text-sedona.svg) center 370px no-repeat,
-  url(../img/bg-back-mobile@1x.jpg) -100px 380px no-repeat;
+  url(../img/bg-back-mobile@1x.jpg) -100px 280px no-repeat;
   background-size: 72%, auto;
 }
 
-.page-header--photo:before {
+.page-header--photo::before {
   position: absolute;
   content: url(../img/bg-intro-triangle-mobile.svg);
   bottom: -5px;
@@ -44,7 +48,7 @@
   background-size: 72%, auto;
 }
 
-.page-header--form:before {
+.page-header--form::before {
   position: absolute;
   content: url(../img/bg-intro-triangle-mobile.svg);
   bottom: -5px;
@@ -60,13 +64,15 @@
 
 .logo-toggle {
   position: relative;
+  height: 56px;
+  background: #FFFFFF;
 }
 
 .page-header__navigation-toggle {
   position: absolute;
   width: 23px;
   height: 22px;
-  right: 17px;
+  right: 20px;
   top: 17px;
   background-color: transparent;
   background-image: url(../../img/icon-menu.svg);
