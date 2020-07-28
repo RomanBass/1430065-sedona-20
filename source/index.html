@@ -2,13 +2,14 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page__body">
+  <body class="page__body body">
     <header class="page-header page-header--index">
       <nav class="page-header__main-navigation main-navigation">
-        <button type="button" class="main-navigation__button--close" aria-label="Закрыть меню"></button>
+        <button type="button" class="main-navigation__close-button" aria-label="Закрыть меню"></button>
         <ul class="main-navigation__list">
           <li class="main-navigation__item main-navigation__item--active">
             <a class="main-navigation__link">
@@ -32,69 +33,69 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__logo-toggle logo-toggle">
+      <div class="page-header__logo-toggle">
       <a>
-        <img class="page-header__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Город Седона">
+        <img class="page-header__logo page-header__logo--mobile" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
       </a>
       <button class="page-header__navigation-toggle" type="button" aria-label="Доступ к меню"></button>
       </div>
     </header>
-    <main class="page-main">
+    <main class="body__main-page main-page">
     <h1 class="visually-hidden">Седона, город для туризма</h1>
-    <h2 class="page-main__title">
+    <h2 class="main-page__title main-page__title--index">
       Седона &mdash; небольшой<br> городок в аризоне, заслуживающий большего!
     </h2>
-    <section class="reasons">
-      <h2 class="reasons__title">Рассмотрим 5 причин, по которым<br> седона круче, чем гранд каньон!</h2>
+    <section class="reasons-list">
+      <h2 class="reasons-list__title">Рассмотрим 5 причин, по которым<br> седона круче, чем гранд каньон!</h2>
       <div class="reasons__item reason">
-        <div class="reason__header reason__header--blue-first">
-          <h2 class="reason__title--blue reason__title--blue-first">Настоящий городок</h2>
-          <p class="reason__number--blue">&mdash; №1 &mdash;</p>
-          <p class="reason__info--blue">Седона не аттракцион для туристов, там течет своя жизнь</p>
+        <div class="reason__header reason__header--first">
+          <h2 class="reason__title">Настоящий городок</h2>
+          <p class="reason__number">&mdash; №1 &mdash;</p>
+          <p class="reason__info">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <img class="reason__image" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Фото с видом Седоны, отель на фоне гор">
         <ul class="reason__features features">
           <li class="features__item features__item--housing">
-            <h3 class="feature__title feature__title--first">Жильё</h3>
-            <p class="feature__info feature__info--first">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <h3 class="features__title features__title--first">Жильё</h3>
+            <p class="features__info feature-list__info--first">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="features__item features__item--souvenir">
-            <h3 class="feature__title">Сувениры</h3>
-            <p class="feature__info">Не только китайского, но и местного производства!</p>
+            <h3 class="features__title">Сувениры</h3>
+            <p class="features__info">Не только китайского, но и местного производства!</p>
           </li>
           <li class="features__item features__item--food">
-            <h3 class="feature__title">Еда</h3>
-            <p class="feature__info">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <h3 class="features__title">Еда</h3>
+            <p class="features__info">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
         </ul>
       </div>
       <div class="reasons__item reason">
-        <div class="reason__header reason__header--blue">
-          <h2 class="reason__title--blue">Там есть мост дьявола</h2>
-          <p class="reason__number--blue">&mdash; №2 &mdash;</p>
-          <p class="reason__info--blue">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+        <div class="reason__header reason__header--second">
+          <h2 class="reason__title">Там есть мост дьявола</h2>
+          <p class="reason__number">&mdash; №2 &mdash;</p>
+          <p class="reason__info">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </div>
         <img class="reason__image" src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Фото с видом Моста Дьявола">
       </div>
       <div class="reasons__item reason">
         <div class="reason__header reason__header--grey">
-          <h2 class="reason__title--grey">Небольшая площадь</h2>
-          <p class="reason__number--grey">&mdash; №3 &mdash;</p>
-          <p class="reason__info--grey">Все интересные места находятся<br> очень близко</p>
+          <h2 class="reason__title">Небольшая площадь</h2>
+          <p class="reason__number">&mdash; №3 &mdash;</p>
+          <p class="reason__info">Все интересные места находятся<br> очень близко</p>
         </div>
       </div>
       <div class="reasons__item reason">
         <div class="reason__header reason__header--grey">
-          <h2 class="reason__title--grey">Красивая дорога</h2>
-          <p class="reason__number--grey">&mdash; №4 &mdash;</p>
-          <p class="reason__info--grey">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
+          <h2 class="reason__title">Красивая дорога</h2>
+          <p class="reason__number">&mdash; №4 &mdash;</p>
+          <p class="reason__info">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
         </div>
       </div>
       <div class="reasons__item reason">
         <div class="reason__header reason__header--grey">
-          <h2 class="reason__title--grey">Мало туристов</h2>
-          <p class="reason__number--grey">&mdash; №5 &mdash;</p>
-          <p class="reason__info--grey">Большинство едет в Гранд Каньон<br> и толпится там</p>
+          <h2 class="reason__title">Мало туристов</h2>
+          <p class="reason__number">&mdash; №5 &mdash;</p>
+          <p class="reason__info">Большинство едет в Гранд Каньон<br> и толпится там</p>
         </div>
       </div>
     </section>
@@ -121,7 +122,7 @@
       <div class="page-footer__copyright copyright">
         <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__image" src="img/logo-htmlacademy.svg" width="27" height="34">
+          <img class="copyright__image" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML-Академии">
         </a>
       </div>
     </footer>
