@@ -2,8 +2,8 @@
   position: relative;
   min-height: 668px;
   margin-bottom: 32px;
-  background: url(../img/text-sedona-index.svg) center 369px no-repeat,
-  url(../img/bg-back-mobile@1x.jpg) -223px 279px no-repeat;
+  background: url("../img/text-sedona-index.svg") center 369px no-repeat,
+    url("../img/bg-back-mobile@1x.jpg") -223px 279px no-repeat;
   background-size: 88%, auto;
   z-index: 0;
 }
@@ -11,12 +11,12 @@
 .page-header--index::before {
   position: absolute;
   content: "";
-  background-image: url(../img/bg-intro-triangle-mobile.svg);
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
   background-size: cover;
   height: 28px;
-  bottom: 0px;
+  bottom: 0;
   left: -11px;
-  right:0px;
+  right: 0;
   z-index: 1;
 }
 
@@ -25,20 +25,20 @@
   min-height: 437px;
   margin-bottom: 23px;
   background:
-  url(../img/text-sedona.svg) center 330px no-repeat,
-  url(../img/bg-back-mobile@1x.jpg) -230px 50px no-repeat;
+    url("../img/text-sedona.svg") center 330px no-repeat,
+    url("../img/bg-back-mobile@1x.jpg") -230px 50px no-repeat;
   background-size: 72%, auto;
 }
 
 .page-header--photo::before {
   position: absolute;
   content: "";
-  background-image: url(../img/bg-intro-triangle-mobile.svg);
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
   background-size: cover;
   height: 28px;
-  bottom: 0px;
+  bottom: 0;
   left: -11px;
-  right:0px;
+  right: 0;
   z-index: 1;
 }
 
@@ -47,20 +47,20 @@
   min-height: 437px;
   margin-bottom: 32px;
   background:
-  url(../img/text-sedona.svg) center 330px no-repeat,
-  url(../img/bg-back-mobile@1x.jpg) -230px 50px no-repeat;
+    url("../img/text-sedona.svg") center 330px no-repeat,
+    url("../img/bg-back-mobile@1x.jpg") -230px 50px no-repeat;
   background-size: 72%, auto;
 }
 
 .page-header--form::before {
   position: absolute;
   content: "";
-  background-image: url(../img/bg-intro-triangle-mobile.svg);
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
   background-size: cover;
   height: 28px;
-  bottom: 0px;
+  bottom: 0;
   left: -11px;
-  right:0px;
+  right: 0;
   z-index: 1;
 }
 
@@ -73,7 +73,7 @@
 .page-header__logo-toggle {
   position: relative;
   height: 56px;
-  background: #FFFFFF;
+  background: @white;
 }
 
 .page-header__navigation-toggle {
@@ -83,8 +83,8 @@
   right: 20px;
   top: 17px;
   background-color: transparent;
-  background-image: url(../../img/icon-menu.svg);
+  background-image: url("../../img/icon-menu.svg");
   background-repeat: no-repeat;
   border: none;
-  cursor: pointer
+  cursor: pointer;
 }
