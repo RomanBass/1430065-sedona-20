@@ -2,8 +2,8 @@
   position: relative;
   padding-top: 55px;
   min-height: 171px;
-  background-color: #81B3D2;
-  color: #EEEEEE;
+  background-color: @blue;
+  color: @light-grey;
   text-align: center;
   text-transform: uppercase;
   z-index: 0;
@@ -11,17 +11,17 @@
 
 .reason__header--first::before {
   position: absolute;
-  content: url(../img/bg-triangle.svg);
+  content: url("../img/bg-triangle.svg");
   top: -1px;
-  left: 0px;
+  left: 0;
   z-index: 1;
 }
 
 .reason__header--second {
   padding-top: 26px;
   min-height: 165px;
-  background-color: #81B3D2;
-  color: #FFFFFF;
+  background-color: @blue;
+  color: @white;
   text-align: center;
   text-transform: uppercase;
 }
@@ -29,8 +29,8 @@
 .reason__header--grey {
   padding-top: 12px;
   min-height: 156px;
-  background-color: #EEEEEE;
-  color: #333333;
+  background-color: @light-grey;
+  color: @dark-grey;
   text-align: center;
   text-transform: uppercase;
 }
