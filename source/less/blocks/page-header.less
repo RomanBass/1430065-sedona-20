@@ -1,90 +1,174 @@
 .page-header--index {
-  position: relative;
-  min-height: 668px;
-  margin-bottom: 32px;
-  background: url(../img/text-sedona-index.svg) center 369px no-repeat,
-  url(../img/bg-back-mobile@1x.jpg) -223px 279px no-repeat;
-  background-size: 88%, auto;
-  z-index: 0;
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    min-height: 668px;
+    margin-bottom: 32px;
+    background: url("../img/text-sedona-index.svg") center 369px no-repeat,
+      url("../img/bg-back-mobile@1x.jpg") -223px 279px no-repeat;
+    background-size: 88%, auto;
+    z-index: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    min-height: 668px;
+    margin-bottom: 32px;
+    background: url("../img/text-sedona-index.svg") center 130px no-repeat,
+      url("../img/bg-back-tablet@1x.jpg") center 0 no-repeat;
+    background-size: 38% auto, 100% auto;
+    z-index: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    min-height: 668px;
+    margin-bottom: 32px;
+    background: url("../img/text-sedona-index.svg") center 130px no-repeat,
+      url("../img/bg-back-desktop@1x.jpg") center 0 no-repeat;
+    background-size: 33% auto, 100% auto;
+    z-index: 0;
+  }
 }
 
 .page-header--index::before {
-  position: absolute;
-  content: "";
-  background-image: url(../img/bg-intro-triangle-mobile.svg);
-  background-size: cover;
-  height: 28px;
-  bottom: 0px;
-  left: -11px;
-  right:0px;
-  z-index: 1;
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    content: "";
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-size: cover;
+    height: 28px;
+    bottom: 0;
+    left: -11px;
+    right: 0;
+    z-index: 1;
+  }
 }
 
 .page-header--photo {
-  position: relative;
-  min-height: 437px;
-  margin-bottom: 23px;
-  background:
-  url(../img/text-sedona.svg) center 330px no-repeat,
-  url(../img/bg-back-mobile@1x.jpg) -230px 50px no-repeat;
-  background-size: 72%, auto;
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    min-height: 437px;
+    margin-bottom: 23px;
+    background:
+      url("../img/text-sedona.svg") center 330px no-repeat,
+      url("../img/bg-back-mobile@1x.jpg") -230px 50px no-repeat;
+    background-size: 72%, auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    min-height: 437px;
+    margin-bottom: 24px;
+    background: url("../img/text-sedona-index.svg") center 130px no-repeat,
+      url("../img/bg-back-tablet@1x.jpg") center 0 no-repeat;
+    background-size: 28% auto, 100% auto;
+    z-index: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    min-height: 437px;
+    margin-bottom: 24px;
+    background: url("../img/text-sedona-index.svg") center 130px no-repeat,
+      url("../img/bg-back-desktop@1x.jpg") center 0 no-repeat;
+    background-size: 23% auto, 100% auto;
+    z-index: 0;
+  }
 }
 
 .page-header--photo::before {
-  position: absolute;
-  content: "";
-  background-image: url(../img/bg-intro-triangle-mobile.svg);
-  background-size: cover;
-  height: 28px;
-  bottom: 0px;
-  left: -11px;
-  right:0px;
-  z-index: 1;
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    content: "";
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-size: cover;
+    height: 28px;
+    bottom: 0;
+    left: -11px;
+    right: 0;
+    z-index: 1;
+  }
 }
 
 .page-header--form {
-  position: relative;
-  min-height: 437px;
-  margin-bottom: 32px;
-  background:
-  url(../img/text-sedona.svg) center 330px no-repeat,
-  url(../img/bg-back-mobile@1x.jpg) -230px 50px no-repeat;
-  background-size: 72%, auto;
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    min-height: 437px;
+    margin-bottom: 32px;
+    background:
+      url("../img/text-sedona.svg") center 330px no-repeat,
+      url("../img/bg-back-mobile@1x.jpg") -230px 50px no-repeat;
+    background-size: 72%, auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    min-height: 437px;
+    margin-bottom: 24px;
+    background: url("../img/text-sedona-index.svg") center 130px no-repeat,
+      url("../img/bg-back-tablet@1x.jpg") center 0 no-repeat;
+    background-size: 28% auto, 100% auto;
+    z-index: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    min-height: 437px;
+    margin-bottom: 24px;
+    background: url("../img/text-sedona-index.svg") center 130px no-repeat,
+      url("../img/bg-back-desktop@1x.jpg") center 0 no-repeat;
+    background-size: 23% auto, 100% auto;
+    z-index: 0;
+  }
 }
 
 .page-header--form::before {
-  position: absolute;
-  content: "";
-  background-image: url(../img/bg-intro-triangle-mobile.svg);
-  background-size: cover;
-  height: 28px;
-  bottom: 0px;
-  left: -11px;
-  right:0px;
-  z-index: 1;
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    content: "";
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-size: cover;
+    height: 28px;
+    bottom: 0;
+    left: -11px;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.page-header__logo-wrapper {
+  height: 56px;
+  background: @white;
 }
 
 .page-header__logo--mobile {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
-.page-header__logo-toggle {
-  position: relative;
-  height: 56px;
-  background: #FFFFFF;
+.page-header__logo--tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-.page-header__navigation-toggle {
-  position: absolute;
-  width: 23px;
-  height: 22px;
-  right: 20px;
-  top: 17px;
-  background-color: transparent;
-  background-image: url(../../img/icon-menu.svg);
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer
+.page-header__logo--desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin: 0 auto;
+  }
 }
