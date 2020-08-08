@@ -3,6 +3,7 @@
 }
 
 .features__item {
+  position: relative;
   margin-bottom: 26px;
   text-align: left;
   list-style-type: none;
@@ -23,7 +24,7 @@
   margin-bottom: 16px;
 }
 
-.features__title--first {
+.features__title--housing {
   @media (max-width: mobile-width-only) {
     margin-left: 0;
     margin-top: 36px;
@@ -38,4 +39,17 @@
   text-transform: uppercase;
   color: @dark-grey;
   margin-left: 1px;
+}
+
+.features__icon--housing {
+  position: absolute;
+  fill: @blue;
+
+  @media (max-width: @mobile-width-only) {
+    top: -10px;
+    left: -48px;
+    width: 39px;
+    height: 37px;
+    fill: @blue;
+  }
 }

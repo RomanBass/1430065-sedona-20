@@ -16,7 +16,7 @@
 }
 
 .reason__header--first::before {
-  @media (max-width: mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
     position: absolute;
     content: url("../img/bg-triangle.svg");
     top: -1px;
@@ -106,10 +106,13 @@
 }
 
 .reason__features {
-  margin-top: 35px;
-  margin-bottom: 34px;
-  margin-left: 69px;
-  margin-right: 21px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 18px;
+    margin-bottom: 8px;
+    margin-left: 69px;
+    margin-right: 21px;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0;
