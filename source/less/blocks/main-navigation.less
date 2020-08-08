@@ -56,23 +56,28 @@
 .main-navigation__item:first-child {
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     box-shadow: none;
     margin-left: 4.0%;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-shadow: none;
+    margin-left: 3.9%;
   }
 }
 
 .main-navigation__item:nth-child(2) {
 
   @media (min-width: @tablet-width) {
-    margin-left: 7.7%;
+    margin-left: 7.9%;
   }
 }
 
 .main-navigation__item:nth-child(3) {
 
   @media (min-width: @tablet-width) {
-    margin-left: 27.4%;
+    margin-left: 28.3%;
   }
 }
 
@@ -84,7 +89,7 @@
   @media (min-width: @tablet-width) {
     box-shadow: none;
     background: @white;
-    margin-left: 6.7%;
+    margin-left: 7.9%;
   }
 }
 
