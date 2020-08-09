@@ -122,5 +122,23 @@
 }
 
 .reason--grey {
-  flex-grow: 1;
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    &:not(:first-child)::before {
+      position: absolute;
+      content: "";
+      width: 280px;
+      height: 1px;
+      top: -1px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: @grey;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
 }

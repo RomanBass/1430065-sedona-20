@@ -18,7 +18,6 @@
   margin: 0;
   list-style-type: none;
 
-
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -28,18 +27,28 @@
 }
 
 .main-navigation__item {
-  padding-top: 10px;
-  margin-bottom: 1px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  min-width: 12%;
-  min-height: 45px;
-  list-style-type: none;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 10px;
+    margin-bottom: 1px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    min-height: 45px;
+    list-style-type: none;
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background: @dark-blue;
+      }
+
+      &:active {
+        background: @darkest-blue;
+      }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -48,7 +57,9 @@
     font-size: 14px;
     line-height: 26px;
     text-align: center;
+    text-transform: uppercase;
     box-shadow: none;
+    min-width: 12%;
     min-height: 41px;
   }
 }
@@ -63,42 +74,97 @@
 
   @media (min-width: @desktop-width) {
     box-shadow: none;
-    margin-left: 3.9%;
+    margin-left: 47px;
   }
 }
 
 .main-navigation__item:nth-child(2) {
 
-  @media (min-width: @tablet-width) {
-    margin-left: 7.9%;
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-left: 7.8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-shadow: none;
+    margin-left: 95px;
   }
 }
 
 .main-navigation__item:nth-child(3) {
 
-  @media (min-width: @tablet-width) {
-    margin-left: 28.3%;
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-left: 27.3%;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-shadow: none;
+    margin-left: 339px;
   }
 }
 
 .main-navigation__item:last-child {
-  margin-bottom: 0;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 87%, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.2) 100%);
 
-  @media (min-width: @tablet-width) {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 0;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 87%, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.2) 100%);
+
+    &:hover {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 87%, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.2) 100%),
+        @dark-blue;
+    }
+
+    &:active {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 87%, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.2) 100%),
+        @darkest-blue;
+    }
+
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     box-shadow: none;
     background: @white;
-    margin-left: 7.9%;
+    margin-left: 6.7%;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-shadow: none;
+    margin-left: 96px;
   }
 }
 
 .main-navigation__link {
-  color: @white;
   text-decoration: none;
 
+  @media (max-width: @mobile-width-only) {
+    display: block;
+    width: 100%;
+    color: @white;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    color: black;
+    color: @black;
+
+    &:hover {
+      color: @blue;
+    }
+
+    &:active {
+      color: @black;
+      opacity: 0.3;
+    }
+
+    &--active {
+      color: @brown;
+    }
+
+    &--active:hover {
+      color: @dark-brown;
+    }
   }
 }
 
