@@ -8,14 +8,32 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
+    width: 270px;
     text-align: center;
     text-transform: uppercase;
     margin-top: 1px;
     margin-bottom: 30px;
-    margin-right: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 3px;
+    br {
+      display: none;
+    }
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-top: 43px;
+    margin-right: 2px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 22px;
+    margin-right: 2px;
     font-weight: 700;
     font-size: 21px;
     line-height: 26px;
