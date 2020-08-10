@@ -66,7 +66,11 @@
     margin-bottom: 0;
     &--second {
       width: 150px;
-      color: red;
+      margin-top: 44px;
+    }
+    &--grey {
+      width: 150px;
+      margin-top: 30px;
     }
   }
 }
@@ -83,6 +87,12 @@
     margin-right: auto;
     margin-top: 13px;
     margin-bottom: 0;
+    &--second {
+      margin-top: 12px;
+    }
+    &--grey {
+      width: 32.61vw;
+    }
   }
 }
 
@@ -97,6 +107,15 @@
     margin-right: auto;
     margin-top: 23px;
     margin-bottom: 0;
+    &--second {
+      width: 180px;
+    }
+    &--grey-second {
+      width: 140px;
+    }
+    &--grey-third {
+      width: 180px;
+    }
   }
 }
 
@@ -171,5 +190,7 @@
 
   @media (min-width: @tablet-width) {
     flex-grow: 1;
+    outline: 3px solid rgba(255, 0, 0, 0.3);
+outline-offset: -3px;
   }
 }
