@@ -31,9 +31,13 @@
     text-align: center;
     margin-top: 158px;
     margin-bottom: 0;
-    &--souvenir {
-      margin-top: 169px;
-    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+    text-align: center;
+    margin-top: 158px;
+    margin-bottom: 0;
   }
 }
 
@@ -51,7 +55,13 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @dark-grey;
-  margin-left: 1px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: 1px;
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     text-align: center;
@@ -63,6 +73,18 @@
     &--food {
       width: 155px;
     }
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    width: 285px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 23px;
+    margin-bottom: 0;
   }
 }
 
@@ -84,11 +106,18 @@
     height: 72px;
     fill: @blue;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 59px;
+    left: 161px;
+    width: 75px;
+    height: 72px;
+    fill: @blue;
+  }
 }
 
 .features__icon--souvenir {
   position: absolute;
-  fill: @blue;
 
   @media (max-width: @mobile-width-only) {
     top: -12px;
@@ -105,11 +134,18 @@
     height: 75px;
     fill: @blue;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 57px;
+    left: 167px;
+    width: 64px;
+    height: 75px;
+    fill: @blue;
+  }
 }
 
 .features__icon--food {
   position: absolute;
-  fill: @blue;
 
   @media (max-width: @mobile-width-only) {
     top: -6px;
@@ -119,11 +155,19 @@
     fill: @blue;
   }
 
-    @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     top: 63px;
     left: 89px;
     width: 76px;
     height: 68px;
+    fill: @blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 63px;
+    left: 161px;
+    width: 76px;
+    height: 69px;
     fill: @blue;
   }
 }
