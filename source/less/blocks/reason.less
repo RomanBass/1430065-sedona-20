@@ -54,6 +54,21 @@
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 0;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 0;
+    &--second {
+      width: 150px;
+      color: red;
+    }
+  }
 }
 
 .reason__number {
@@ -62,12 +77,27 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
 }
 
 .reason__info {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 23px;
+    margin-bottom: 0;
+  }
 }
 
 .reason--first {
@@ -93,14 +123,14 @@
   &--tablet {
     @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
       display: block;
-      width: 66.66%;
+      width: 66.67%;
     }
   }
 
   &--desktop {
     @media (min-width: @desktop-width) {
       display: block;
-      width: 66.66%;
+      width: 66.67%;
     }
   }
 }
@@ -114,10 +144,11 @@
     margin-right: 21px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     margin: 0;
     display: flex;
     width: 100%;
+    min-height: 330px;
   }
 }
 

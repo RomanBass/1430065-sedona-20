@@ -11,6 +11,9 @@
 
   @media (min-width: @tablet-width) {
     width: 33.33%;
+    &--souvenir {
+      order: 1;
+    }
   }
 }
 
@@ -22,6 +25,16 @@
   color: @black;
   margin-left: 1px;
   margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    font-size: 21px;
+    text-align: center;
+    margin-top: 158px;
+    margin-bottom: 0;
+    &--souvenir {
+      margin-top: 169px;
+    }
+  }
 }
 
 .features__title--housing {
@@ -39,17 +52,36 @@
   text-transform: uppercase;
   color: @dark-grey;
   margin-left: 1px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    text-align: center;
+    width: 192px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 23px;
+    margin-bottom: 0;
+    &--food {
+      width: 155px;
+    }
+  }
 }
 
 .features__icon--housing {
   position: absolute;
-  fill: @blue;
 
   @media (max-width: @mobile-width-only) {
     top: -10px;
     left: -48px;
     width: 39px;
     height: 37px;
+    fill: @blue;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    top: 60px;
+    left: 90px;
+    width: 75px;
+    height: 72px;
     fill: @blue;
   }
 }
@@ -65,6 +97,14 @@
     height: 38px;
     fill: @blue;
   }
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    top: 57px;
+    left: 95px;
+    width: 64px;
+    height: 75px;
+    fill: @blue;
+  }
 }
 
 .features__icon--food {
@@ -76,6 +116,14 @@
     left: -51px;
     width: 40px;
     height: 35px;
+    fill: @blue;
+  }
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    top: 63px;
+    left: 89px;
+    width: 76px;
+    height: 68px;
     fill: @blue;
   }
 }
