@@ -75,11 +75,13 @@
     margin-left: 3px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     font-weight: 700;
     font-size: 30px;
     line-height: 26px;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 62px;
+    margin-bottom: 0;
   }
 }
