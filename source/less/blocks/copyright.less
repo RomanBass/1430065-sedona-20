@@ -12,6 +12,11 @@
   margin-top: 4px;
   margin-right: 0;
   margin-left: 96px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-left: calc(191% - 128px);
+  }
+
 }
 
 .copyright__link {
