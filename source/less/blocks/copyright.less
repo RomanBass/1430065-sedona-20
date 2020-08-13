@@ -1,6 +1,6 @@
 .copyright {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin-bottom: 15px;
 }
 
@@ -9,6 +9,27 @@
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
-  margin-top: 5px;
-  margin-right: 12px;
+  margin-top: 4px;
+  margin-right: 0;
+  margin-left: 96px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-left: calc(191% - 128px);
+  }
+}
+
+.copyright__link {
+  margin-top: -3px;
+  margin-left: 7px;
+  fill: @black;
+  order: 1;
+
+  &:hover {
+    fill: @blue;
+  }
+
+  &:active {
+    fill: @black;
+    opacity: 0.3;
+  }
 }

@@ -1,6 +1,19 @@
 .hotel {
-  min-height: 637px;
-  background-color: rgba(255, 0, 0, 0.2);
+  @media (max-width: @mobile-width-only) {
+    min-height: 636px;
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    min-height: 668px;
+    margin-bottom: 1px;
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 681px;
+    background-color: rgba(255, 0, 0, 0.2);
+  }
 }
 
 .hotel__title {

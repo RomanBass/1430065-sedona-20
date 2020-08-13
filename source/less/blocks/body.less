@@ -1,9 +1,17 @@
 .body {
-  width: 320px;
-  margin: 0 auto;
+
   font-family: "PT Sans", "Arial", sans-serif;
+  margin: 0 auto;
+
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+  }
 
   @media (min-width: @tablet-width) {
     width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
   }
 }

@@ -5,7 +5,26 @@
   text-align: center;
   text-transform: uppercase;
   color: @dark-grey;
-  margin-top: 0;
-  margin-bottom: 16px;
-  margin-left: 2px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-left: 2px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-top: 33px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    width: 57vw;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 33px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    width: 440px;
+  }
 }

@@ -3,6 +3,7 @@
 }
 
 .features__item {
+  position: relative;
   margin-bottom: 26px;
   text-align: left;
   list-style-type: none;
@@ -10,6 +11,10 @@
 
   @media (min-width: @tablet-width) {
     width: 33.33%;
+
+    &--souvenir {
+      order: 1;
+    }
   }
 }
 
@@ -21,9 +26,23 @@
   color: @black;
   margin-left: 1px;
   margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    font-size: 21px;
+    text-align: center;
+    margin-top: 158px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+    text-align: center;
+    margin-top: 158px;
+    margin-bottom: 0;
+  }
 }
 
-.features__title--first {
+.features__title--housing {
   @media (max-width: mobile-width-only) {
     margin-left: 0;
     margin-top: 36px;
@@ -37,5 +56,122 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @dark-grey;
-  margin-left: 1px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: 1px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    text-align: center;
+    width: 192px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 23px;
+    margin-bottom: 0;
+
+    &--food {
+      width: 155px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    width: 285px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 23px;
+    margin-bottom: 0;
+  }
+}
+
+.features__icon--housing {
+  position: absolute;
+
+  @media (max-width: @mobile-width-only) {
+    top: -10px;
+    left: -48px;
+    width: 39px;
+    height: 37px;
+    fill: @blue;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    top: 60px;
+    left: 90px;
+    width: 75px;
+    height: 72px;
+    fill: @blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 59px;
+    left: 161px;
+    width: 75px;
+    height: 72px;
+    fill: @blue;
+  }
+}
+
+.features__icon--souvenir {
+  position: absolute;
+
+  @media (max-width: @mobile-width-only) {
+    top: -12px;
+    left: -44px;
+    width: 32px;
+    height: 38px;
+    fill: @blue;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    top: 57px;
+    left: 95px;
+    width: 64px;
+    height: 75px;
+    fill: @blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 57px;
+    left: 167px;
+    width: 64px;
+    height: 75px;
+    fill: @blue;
+  }
+}
+
+.features__icon--food {
+  position: absolute;
+
+  @media (max-width: @mobile-width-only) {
+    top: -6px;
+    left: -51px;
+    width: 40px;
+    height: 35px;
+    fill: @blue;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    top: 63px;
+    left: 89px;
+    width: 76px;
+    height: 68px;
+    fill: @blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 63px;
+    left: 161px;
+    width: 76px;
+    height: 69px;
+    fill: @blue;
+  }
 }
