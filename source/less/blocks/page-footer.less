@@ -6,8 +6,9 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
+    min-height: 120px;
   }
 }
 
@@ -25,10 +26,24 @@
     margin-right: auto;
     padding-right: 2px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 20px;
+    margin-left: 119px;
+  }
 }
 
 .page-footer__social {
   @media (max-width: @mobile-width-only) {
     margin-bottom: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 265px;
+  }
+}
+
+.page-footer__copyright {
+  margin-top: 21px;
+  margin-left: 175px;
 }
