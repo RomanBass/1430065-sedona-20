@@ -210,7 +210,19 @@
 
 .page-header__logo-wrapper {
   height: 56px;
+  margin-right: auto;
+  margin-left: auto;
   background: @white;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-top: -56px;
+    width: 92px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -56px;
+    width: 187px;
+  }
 }
 
 .page-header__logo--mobile {
@@ -218,32 +230,18 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
   @media (min-width: @desktop-width) {
-    display: none;
+    width: 187px;
+    height: 96px;
   }
 }
 
-.page-header__logo--tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+.page-header__logo-link {
+  @media (max-width: @mobile-width-only) {
     display: block;
-    margin: 0 auto;
-    margin-top: -57px;
-    padding-top: 1px;
+    width: 92px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-.page-header__logo--desktop {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
-    margin: 0 auto;
-    margin-top: -57px;
-  }
-}

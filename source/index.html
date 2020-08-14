@@ -34,9 +34,11 @@
         </ul>
       </nav>
       <div class="page-header__logo-wrapper">
-        <img class="page-header__logo page-header__logo--mobile" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона для мобильника">
-        <img class="page-header__logo page-header__logo--tablet" src="img/logo-sedona-tablet.svg" width="102" height="84" alt="Логотип города Седона для планшета">
-        <img class="page-header__logo page-header__logo--desktop" src="img/logo-sedona-desktop.svg" width="187" height="96" alt="Логотип города Седона для компьютера">
+        <picture>
+          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo-sedona-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <img class="page-header__logo page-header__logo--mobile" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона для мобильника">
+        </picture>
       </div>
     </header>
     <main class="body__main-page main-page">
