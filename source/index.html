@@ -34,9 +34,11 @@
         </ul>
       </nav>
       <div class="page-header__logo-wrapper">
-        <img class="page-header__logo page-header__logo--mobile" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона для мобильника">
-        <img class="page-header__logo page-header__logo--tablet" src="img/logo-sedona-tablet.svg" width="102" height="84" alt="Логотип города Седона для планшета">
-        <img class="page-header__logo page-header__logo--desktop" src="img/logo-sedona-desktop.svg" width="187" height="96" alt="Логотип города Седона для компьютера">
+        <picture>
+          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo-sedona-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <img class="page-header__logo page-header__logo--mobile" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+        </picture>
       </div>
     </header>
     <main class="body__main-page main-page">
@@ -52,10 +54,12 @@
           <p class="reason__number">&mdash; №1 &mdash;</p>
           <p class="reason__info">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
-        <img class="reason__image reason__image--mobile" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Фото для мобильного телефона с видом Седоны, отель на фоне гор">
-        <img class="reason__image reason__image--tablet" src="img/main-city-tablet@1x.jpg" width="512" height="256" alt="Фото для планшена с видом Седоны, отель на фоне гор">
         <div class="reason__image-wrapper">
-          <img class="reason__image reason__image--desktop-first" src="img/main-city-desktop@1x.jpg" width="800" height="256" alt="Фото для компьютера с видом Седоны, отель на фоне гор">
+          <picture>
+            <source media="(min-width: 1200px)" srcset= "img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+            <img class="reason__image reason__image--desktop-first" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Фото. Вид Седоны, отель на фоне гор">
+          </picture>
         </div>
         <ul class="reason__features features">
           <li class="features__item features__item--housing">
@@ -106,10 +110,12 @@
           <p class="reason__number reason__number--second">&mdash; №2 &mdash;</p>
           <p class="reason__info reason__info--second">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </div>
-        <img class="reason__image reason__image--mobile" src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Фото для мобильного телефона с видом Моста Дьявола">
-        <img class="reason__image reason__image--tablet" src="img/main-bridge-tablet@1x.jpg" width="512" height="256" alt="Фото для планшета с видом Моста Дьявола">
         <div class="reason__image-wrapper">
-          <img class="reason__image reason__image--desktop-second" src="img/main-bridge-desktop@1x.jpg" width="800" height="256" alt="Фото для компьютера с видом Моста Дьявола">
+          <picture>
+            <source media="(min-width: 1200px)" srcset= "img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+            <img class="reason__image reason__image--desktop-second" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Фото. Вид Моста дьявола">
+          </picture>
         </div>
       </div>
       <div class="reasons-list__wrapper">

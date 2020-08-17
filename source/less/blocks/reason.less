@@ -222,24 +222,14 @@
 }
 
 .reason__image {
-  display: none;
+  display: block;
 
-  &--mobile {
-    @media (max-width: @mobile-width-only) {
-      display: block;
-    }
-  }
-
-  &--tablet {
-    @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
-      display: block;
-      width: 66.67%;
-    }
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 100%;
   }
 
   &--desktop-first {
     @media (min-width: @desktop-width) {
-      display: block;
       width: 100%;
       margin-top: -68px;
       margin-bottom: -76px;
@@ -248,7 +238,6 @@
 
   &--desktop-second {
     @media (min-width: @desktop-width) {
-      display: block;
       width: 100%;
       margin-top: -15px;
       margin-bottom: -129px;
@@ -257,8 +246,10 @@
 }
 
 .reason__image-wrapper {
+  @media (min-width: @tablet-width) {
   width: 66.67%;
   overflow: hidden;
+  }
 }
 
 .reason__features {

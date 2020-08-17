@@ -79,6 +79,7 @@
     @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
       grid-column-start: 1;
       grid-column-end: 3;
+      width: 100%;
     }
 
     @media (min-width: @desktop-width) {
@@ -89,27 +90,17 @@
 }
 
 .photo__image {
-  display: none;
+  display: block;
 
-  &--mobile {
-    @media (max-width: @mobile-width-only) {
-      display: block;
-      margin-top: 23px;
-      margin-left: 20px;
-    }
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+    margin-top: 23px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
-  &--tablet {
-    @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
-      display: block;
-      width: 100vw;
-    }
-  }
-
-  &--desktop {
-    @media (min-width: @desktop-width) {
-      display: block;
-    }
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 100vw;
   }
 }
 
