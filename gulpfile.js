@@ -9,6 +9,7 @@ const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const del = require("del");
 
+
 // Styles
 
 const styles = () => {
@@ -82,9 +83,26 @@ exports.clean = clean;
 //New Run Build
 
 const build = gulp.series(
-    "clean",
-    "copy"
+    clean,
+    copy
 );
 
 exports.build = build;
 
+//Images Optimization
+
+const imagemin = require("gulp-imagemin");
+const imageminOptipng = require("imagemin-optipng");
+const imageminJpegtran = require("imagemin-jpegtran");
+const imageminSvgo = require("imagemin-svgo");
+
+const images = () => {
+    return gulp.src("source/img/**/*.{jpg, png, svg}")
+        .pipe(imagemin([
+            imageminOptipng({optimizationLevel: 3}),
+            imageminJpegtran({progressive: true}),
+            imageminSvgo()
+       ]))
+}
+
+exports.images = images;
