@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "del": "^5.1.0",
+    "gulp-htmlmin": "^5.0.1",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^8.0.0"

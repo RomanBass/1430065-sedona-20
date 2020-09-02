@@ -8,6 +8,13 @@ const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const del = require("del");
+const imagemin = require("gulp-imagemin");
+const imageminOptipng = require("imagemin-optipng");
+const imageminJpegtran = require("imagemin-jpegtran");
+const imageminSvgo = require("imagemin-svgo");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const htmlmin = require("gulp-htmlmin");
 
 // Styles
 
@@ -48,7 +55,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+gulp.watch("source/*.html").on("change", () => {htmlMinify(); sync.reload()});
 }
 
 exports.default = gulp.series(
@@ -80,26 +87,19 @@ exports.clean = clean;
 
 //Images Optimization
 
-const imagemin = require("gulp-imagemin");
-const imageminOptipng = require("imagemin-optipng");
-const imageminJpegtran = require("imagemin-jpegtran");
-const imageminSvgo = require("imagemin-svgo");
-
 const images = () => {
     return gulp.src("source/img/**/*.{jpg,png,svg}")
         .pipe(imagemin([
             imageminOptipng({optimizationLevel: 3}),
             imageminJpegtran({progressive: true}),
             imageminSvgo()
-       ]))
-       .pipe(gulp.dest("build/img"));
+        ]))
+        .pipe(gulp.dest("build/img"));
 }
 
 exports.images = images;
 
 //Create WebP
-
-const webp = require("gulp-webp");
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
@@ -111,8 +111,6 @@ exports.webp = createWebp;
 
 //Create Sprite
 
-const svgstore = require("gulp-svgstore");
-
 const sprite = () => {
   return gulp.src("build/img/**/icon-*.svg")
     .pipe(svgstore())
@@ -123,6 +121,16 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+//HTML Minify
+
+const htmlMinify = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"))
+}
+
+exports.htmlMinify = htmlMinify;
+
 //New Run Build
 
 const build = gulp.series(
@@ -131,7 +139,8 @@ const build = gulp.series(
     styles,
     images,
     createWebp,
-    sprite
+    sprite,
+    htmlMinify
 );
 
 exports.build = build;
