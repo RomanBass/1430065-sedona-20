@@ -53,7 +53,55 @@
           Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </h2>
         <div class="review__review-form review-form">
-          <h2 class="review-form__title">Здесь будет<br> форма отзыва</h2>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="review-form__fieldset">
+              <legend class="review-form__legend">Представьтесь:</legend>
+              <label for="name" class="review-form__label">Имя*:</label>
+              <input id="name" class="review-form__input" type="text" name="name" placeholder="Петр" required>
+              <label for="surname" class="review-form__label">Фамилия*:</label>
+              <input id="surname" class="review-form__input" type="text" name="surname" placeholder="Иванов" required>
+              <label for="patronymic" class="review-form__label">Отчество:</label>
+              <input id="patronymic" class="review-form__input" type="text" name="patronymic" placeholder="Александрович">
+            </fieldset>
+            <fieldset class="review-form__fieldset">
+              <legend class="review-form__legend">Контактная информация:</legend>
+              <label for="phone" class="review-form__label">Контактный телефон*:</label>
+              <input id="phone" class="review-form__input" type="tel" name="phone" placeholder="Введите телефон" required>
+              <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+              <label for="email" class="review-form__label">Электронная почта*:</label>
+              <input id="email" class="review-form__input" type="email" name="email" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+              <svg width="16" height="12">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+            </fieldset>
+            <fieldset class="review-form__fieldset">
+              <legend class="review-form__legend">Ваше общее впечатление</legend>
+              <input type="radio" name="impression" value="positive" class="review-form__input" id="impression-positive" checked>
+              <label for="impression-positive" tabindex="0" class="review-form__label">Скорее положительное</label>
+              <input type="radio" name="impression" value="negative" class="review-form__input" id="impression-negative">
+              <label for="impression-negative" tabindex="0" class="review-form__label">Скорее отрицательное</label>
+              <input type="radio" name="impression" value="uncertain" class="review-form__input" id="impression-uncertain">
+              <label for="impression-uncertain" tabindex="0" class="review-form__label">Затрудняюсь ответить</label>
+            </fieldset>
+            <fieldset class="review-form__fieldset">
+              <legend class="review-form__legend">Посещенные достопримечательности:</legend>
+              <input type="checkbox" name="devil-bridge" class="revie-form__input" id="devil-bridge" tabindex="0" checked>
+              <label for="devil-bridge" class="review-form__label" tabindex="0">Мост дьявола</label>
+              <input type="checkbox" name="bell-mountain" class="revie-form__input" id="bell-mountain" tabindex="0" checked>
+              <label for="bell-mountain" class="review-form__label" tabindex="0">Гора-Колокол</label>
+              <input type="checkbox" name="slide-park" class="revie-form__input" id="slide-park" tabindex="0" checked>
+              <label for="slide-park" class="review-form__label" tabindex="0">Слайд-парк</label>
+              <input type="checkbox" name="red-rocks" class="revie-form__input" id="red-rocks" tabindex="0">
+              <label for="red-rocks" class="review-form__label" tabindex="0">Красные скалы</label>
+            </fieldset>
+            <fieldset class="review-form__fieldset">
+              <legend class="review-form__legend">Опишите свои эмоции:</legend>
+              <textarea class="review-form__text" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
+            </fieldset>
+            <button type="submit" class="review-form__submit">Отправить отзыв</button>
+          </form>
         </div>
       </section>
     </main>
