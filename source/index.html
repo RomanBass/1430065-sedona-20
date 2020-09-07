@@ -44,7 +44,7 @@
     <main class="body__main-page main-page">
     <h1 class="visually-hidden">Седона, город для туризма</h1>
     <h2 class="main-page__title main-page__title--index">
-      Седона &mdash; небольшой городок в аризоне,<br> заслуживающий большего!
+      Седона &mdash; небольшой городок в аризоне, заслуживающий большего!
     </h2>
     <section class="reasons-list">
       <h2 class="reasons-list__title">Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</h2>
@@ -131,9 +131,28 @@
     </section>
     <section class="main-page__hotel hotel">
       <h2 class="hotel__title">Заинтересовались?</h2>
-      <p class="hotel__info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне<p>
-      <a href="hotel-search.html" class="hotel__search">Найти гостиницу</a>
-      <img src="img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Карта окресностей Седоны">
+      <p class="hotel__info">Укажите предполагаемые даты поездки,<br>&nbsp;и мы покажем вам лучшие предложения гостиниц в седоне<p>
+      <div class="hotel__search">
+        <a href="hotel-search.html">Найти гостиницу</a>
+      </div>
+      <div class="hotel__map">
+
+
+      <iframe class="hotel__iframe hotel__iframe--mobile" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1450814.771323952!2d-112.77276513440201!3d34.86041153820348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1599474704195!5m2!1sru!2sru" width="320" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe class="hotel__iframe hotel__iframe--tablet" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1450814.771323952!2d-112.77276513440201!3d34.86041153820348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1599486737277!5m2!1sru!2sru" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe class="hotel__iframe hotel__iframe--desktop" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1676202.7364058066!2d-112.7727651!3d34.8604115!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1599489124235!5m2!1sru!2sru" width="1200" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset= "img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта окрестностей Седоны">
+          </picture>
+
+
+      </div>
     </section>
     </main>
     <footer class="page-footer">
