@@ -148,16 +148,19 @@
       <section class="main__video video">
         <h2 class="video__title">Все еще сомневаетесь?</h2>
         <p class="video__info">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <img src="img/video-mobile@1x.jpg" width="320" height="201" alt="Кадр из видеопрезентации">
-        <svg class="social__icon social__icon--twitter" width="16px" height="20px">
-          <use xlink:href="img/sprite.svg#icon-video-replay"></use>
-        </svg>
-        <svg class="social__icon social__icon--twitter" width="32px" height="20px">
-          <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
-        </svg>
-        <svg class="social__icon social__icon--twitter" width="20px" height="20px">
-          <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
-        </svg>
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+          <source media="(min-width: 1200px)" srcset= "img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img class="video__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Кадр из видеопрезентации">
+        </picture>
+        <div class="video__player player">
+          <div class="player__timer"></div>
+          <div class="player__controls">
+          </div>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
