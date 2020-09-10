@@ -1,22 +1,68 @@
 .review-form {
   @media (max-width: @mobile-width-only) {
-    min-height: 1659px;
-    background-color: rgba(255, 0, 0, 0.2);
+    min-height: 1671px;
+    background-color: @white;
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     min-height: 1486px;
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: @white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 84.4vw;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 1273px;
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: @white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .review-form__fieldset {
   border: none;
+  display: block;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 20px;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 84.4vw;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+
+    &--impression {
+      order: -1;
+    }
+
+    &--half {
+      width: 42.2vw;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+
+    &--impression {
+      order: -1;
+    }
+
+    &--half {
+      width: 480px;
+    }
+  }
 }
 
 .review-form__legend {
@@ -26,7 +72,9 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+    margin-left: auto;
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
@@ -63,6 +111,8 @@
 }
 
 .review-form__input {
+  padding: 0;
+
   &--contacts {
     font-size: 18px;
     line-height: 26px;
@@ -71,7 +121,95 @@
     background-color: @light-grey-info;
 
     &::placeholder {
+      font-family: "PT Sans", "Arial", sans-serif;
       color: @black;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &--name {
+      width: 230px;
+      height: 58px;
+      margin-bottom: 20px;
+    }
+
+    &--surname {
+      width: 192px;
+      height: 58px;
+      margin-bottom: 20px;
+    }
+
+    &--patronymic {
+      width: 192px;
+      height: 58px;
+    }
+
+    &--phone {
+      width: 280px;
+      height: 58px;
+    }
+
+    &--email {
+      width: 280px;
+      height: 58px;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    &--name {
+      width: 28.2vw;
+      height: 58px;
+      margin-bottom: 20px;
+    }
+
+    &--surname {
+      width: 23.2vw;
+      height: 58px;
+      margin-bottom: 20px;
+    }
+
+    &--patronymic {
+      width: 23.2vw;
+      height: 58px;
+    }
+
+    &--phone {
+      width: 55.5vw;
+      height: 58px;
+    }
+
+    &--email {
+      width: 55.5vw;
+      height: 58px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--name {
+      width: 350px;
+      height: 58px;
+      margin-bottom: 20px;
+    }
+
+    &--surname {
+      width: 312px;
+      height: 58px;
+      margin-bottom: 20px;
+    }
+
+    &--patronymic {
+      width: 312px;
+      height: 58px;
+    }
+
+    &--phone {
+      width: 257px;
+      height: 58px;
+    }
+
+    &--email {
+      width: 258px;
+      height: 58px;
     }
   }
 }
@@ -87,10 +225,32 @@
   &::placeholder {
     color: @black;
   }
+
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+    min-height: 160px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 84.4vw;
+    min-height: 160px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    min-height: 160px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 .review-form__submit {
   display: block;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 400;
@@ -101,4 +261,36 @@
   background-color: @blue;
   border: none;
   cursor: pointer;
+
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+    height: 58px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 42.2vw;
+    height: 58px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+    height: 58px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.review-form__remark {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }

@@ -1,19 +1,19 @@
 .video {
   @media (max-width: @mobile-width-only) {
-    min-height: 497px;
-    background-color: rgba(255, 0, 0, 0.2);
+    min-height: 463px;
+    background-color: @white;
     margin-bottom: 41px;
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
-    min-height: 743px;
-    background-color: rgba(255, 0, 0, 0.2);
+    min-height: 687px;
+    background-color: @white;
     margin-bottom: 41px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 790px;
-    background-color: rgba(255, 0, 0, 0.2);
+    min-height: 729px;
+    background-color: @white;
     margin-bottom: 41px;
   }
 }
@@ -25,7 +25,10 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin: 0 auto;
+    margin-top: 34px;
+    margin-right: auto;
+    margin-bottom: 28px;
+    margin-left: auto;
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
@@ -34,6 +37,10 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 56px;
+    margin-right: auto;
+    margin-bottom: 33px;
+    margin-left: auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,6 +49,10 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 61px;
+    margin-right: auto;
+    margin-bottom: 33px;
+    margin-left: auto;
   }
 }
 
@@ -51,4 +62,35 @@
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+
+  @media (max-width: @mobile-width-only) {
+    width: 260px;
+    margin-right: auto;
+    margin-bottom: 34px;
+    margin-left: auto;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 60vw;
+    margin-right: auto;
+    margin-bottom: 80px;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 450px;
+    margin-right: auto;
+    margin-bottom: 78px;
+    margin-left: auto;
+  }
+}
+
+.video__image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 84.5vw;
+  }
 }
