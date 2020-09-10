@@ -9,35 +9,113 @@
   @media (max-width: @mobile-width-only) {
     width: 280px;
     height: 45px;
-    background: @black;
-    opacity: 0.6;
+    background: @black-opacitive06;
     margin-top: -45px;
     margin-right: auto;
     margin-left: auto;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 235px;
+      height: 3px;
+      background: @white;
+      opacity: 0.2;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: @white;
+      top: 0;
+      bottom: 0;
+      left: 58px;
+      margin: auto 0;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     width: 84.5vw;
     height: 12.1vw;
-    background: @black;
-    opacity: 0.6;
+    background: @black-opacitive06;
     margin-top: -12.1vw;
     margin-right: auto;
     margin-left: auto;
     position: relative;
     z-index: 1;
+
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50.7vw;
+      height: 3px;
+      background: @white;
+      opacity: 0.2;
+      top: 0;
+      bottom: 0;
+      left: 12.2vw;
+      margin: auto 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: @white;
+      top: 0;
+      bottom: 0;
+      left: 26.9vw;
+      margin: auto 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 800px;
     height: 93px;
-    background: @black;
-    opacity: 0.6;
+    background: @black-opacitive06;
     margin-top: -93px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
     z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 540px;
+      height: 3px;
+      background: @white;
+      opacity: 0.2;
+      top: 0;
+      bottom: 0;
+      left: 93px;
+      margin: auto 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: @white;
+      top: 0;
+      bottom: 0;
+      left: 206px;
+      margin: auto 0;
+    }
   }
 }
 
@@ -72,3 +150,29 @@
     z-index: 2;
   }
 }
+
+.player__replay-button {
+  position: relative;
+  width: 16px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.player__replay-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: @grey-blue;
+
+  &:hover {
+    fill: @dark-grey;
+  }
+
+  &:active {
+    fill: @dark-grey;
+    opacity: 0.3;
+  }
+}
+
