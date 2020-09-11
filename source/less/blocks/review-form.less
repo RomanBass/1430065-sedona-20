@@ -32,6 +32,7 @@
   @media (max-width: @mobile-width-only) {
     margin-top: 20px;
     margin-bottom: 36px;
+    margin-left: 8px;
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
@@ -75,6 +76,18 @@
     margin-right: auto;
     margin-bottom: 14px;
     margin-left: auto;
+
+    &--person {
+      padding-top: 1px;
+      padding-right: 8px;
+      margin-bottom: 13px;
+    }
+
+    &--contacts {
+      padding-right: 7px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
@@ -108,15 +121,39 @@
     line-height: 26px;
     font-weight: 700;
   }
+
+  @media (max-width: @mobile-width-only) {
+    &--name {
+      margin-right: 10px;
+    }
+
+    &--surname {
+      margin-right: 11px;
+    }
+
+    &--patronymic {
+      margin-right: 13px;
+    }
+
+    &--phone {
+      margin-left: 23px;
+    }
+
+    &--email {
+      margin-left: 22px;
+    }
+  }
 }
 
 .review-form__input {
   padding: 0;
+  outline: none;
 
   &--contacts {
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
+    padding-left: 5px;
     border: none;
     background-color: @light-grey-info;
 
@@ -124,34 +161,58 @@
       font-family: "PT Sans", "Arial", sans-serif;
       color: @black;
     }
+
+    &:hover {
+      background-color: @modest-grey;
+    }
+
+    &:active {
+      background-color: @white;
+      outline: 4px solid @modest-grey;
+      outline-offset: -4px;
+    }
   }
 
   @media (max-width: @mobile-width-only) {
     &--name {
-      width: 230px;
-      height: 58px;
+      width: 208px;
+      height: 53px;
+      padding-top: 5px;
+      padding-left: 22px;
       margin-bottom: 20px;
     }
 
     &--surname {
-      width: 192px;
-      height: 58px;
+      width: 170px;
+      height: 53px;
+      padding-top: 5px;
+      padding-left: 22px;
       margin-bottom: 20px;
     }
 
     &--patronymic {
-      width: 192px;
-      height: 58px;
+      width: 172px;
+      height: 53px;
+      padding-top: 5px;
+      padding-left: 22px;
     }
 
     &--phone {
-      width: 280px;
-      height: 58px;
+      width: 200px;
+      height: 53px;
+      margin-top: 10px;
+      margin-bottom: 14px;
+      padding-top: 5px;
+      padding-left: 22px;
     }
 
     &--email {
-      width: 280px;
-      height: 58px;
+      width: 200px;
+      height: 53px;
+      margin-top: 7px;
+      margin-bottom: 3px;
+      padding-top: 5px;
+      padding-left: 22px;
     }
   }
 
@@ -292,5 +353,39 @@
 
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+}
+
+.review-form__input-wrapper {
+  display: flex;
+}
+
+.review-form__icon-wrapper {
+  width: 58px;
+  height: 58px;
+  background-color: @modest2-grey;
+
+  &--phone {
+    margin-top: 10px;
+    margin-bottom: 14px;
+  }
+
+  &--email {
+    margin-top: 7px;
+    margin-bottom: 3px;
+  }
+}
+
+.review-form__icon {
+  display: block;
+
+  &--phone {
+    margin-top: 20px;
+    margin-left: 21px;
+  }
+
+  &--email {
+    margin-top: 21px;
+    margin-left: 21px;
   }
 }
