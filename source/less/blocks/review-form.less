@@ -30,9 +30,66 @@
   display: block;
 
   @media (max-width: @mobile-width-only) {
+    position: relative;
     margin-top: 20px;
     margin-bottom: 36px;
     margin-left: 8px;
+
+    &--person:before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -20px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
+
+
+    &--contacts:before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -21px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
+
+    &--impression {
+      margin-bottom: 8px;
+    }
+
+
+    &--impression:before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -21px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
+
+    &--attractions:before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -16px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
+
+    &--emotions:before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -21px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
@@ -88,6 +145,21 @@
       margin-top: 12px;
       margin-bottom: 12px;
     }
+
+    &--impression {
+      padding-right: 8px;
+      margin-bottom: 31px;
+    }
+
+    &--attractions {
+      padding-right: 9px;
+      margin-bottom: 31px;
+    }
+
+    &--emotions {
+      padding-right: 6px;
+      margin-bottom: 9px;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
@@ -116,7 +188,8 @@
     text-transform: uppercase;
   }
 
-  &--responce {
+  &--response,
+  &--attractions {
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
@@ -288,10 +361,15 @@
   }
 
   @media (max-width: @mobile-width-only) {
-    width: 280px;
-    min-height: 160px;
+    width: 235px;
+    min-height: 134px;
     margin: 0 auto;
-    padding: 0;
+    margin-bottom: 1px;
+    padding-top: 13px;
+    padding-right: 23px;
+    padding-bottom: 13px;
+    padding-left: 21px;
+    word-spacing: -0.23em;
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
@@ -389,3 +467,118 @@
     margin-left: 21px;
   }
 }
+
+.review-form__response-wrapper {
+  margin-bottom: 43px;
+  margin-left: 78px;
+
+  &:last-child {
+    margin-bottom: 27px;
+  }
+}
+
+.review-form__input--response {
+  display: none;
+}
+
+.review-form__label {
+  position: relative;
+
+  &--response {
+    outline: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: @light-grey-info;
+      top: -17px;
+      left: -78px;
+    }
+
+    &:hover::before {
+      background-color: @modest-grey;
+    }
+
+    &:active::before {
+      background-color: @grey-soft-light;
+    }
+  }
+
+  &--attractions {
+    outline: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 46px;
+      height: 46px;
+      border: 5px solid @light-grey-info;
+      border-radius: 5px;
+      background-color: @light-grey-info;
+      top: -17px;
+      left: -80px;
+    }
+
+    &:hover::before {
+      background-color: @modest-grey;
+      border: 5px solid @modest-grey;
+    }
+
+    &:active::before {
+      background-color: @grey-soft-light;
+      border: 5px solid @grey-soft-light;
+    }
+  }
+
+}
+
+.review-form__input--response:checked ~ .review-form__label--response::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid @dark-grey;
+  border-radius: 50%;
+  background-color: @dark-grey;
+  top: 1px;
+  left: -60px;
+}
+
+.review-form__input--response:checked ~ .review-form__label--response:active::after {
+  opacity: 0.3;
+}
+
+.review-form__attractions-wrapper {
+  margin-bottom: 54px;
+  margin-left: 79px;
+
+  &:last-child {
+    margin-bottom: 14px;
+  }
+}
+
+.review-form__input--attractions {
+  display: none;
+}
+
+.review-form__input--attractions:checked ~ .review-form__label--attractions::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 10px;
+  transform: rotate(-45deg);
+  border: 3px solid @dark-grey;
+  border-top-style: none;
+  border-right-style: none;
+  background-color: transparent;
+  top: 1px;
+  left: -62px;
+}
+
+.review-form__input--attractions:checked ~ .review-form__label--attractions:active::after {
+  opacity: 0.3;
+}
+
