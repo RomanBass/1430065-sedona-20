@@ -535,7 +535,6 @@
 
 .review-form__input {
   padding: 0;
-  outline: none;
 
   &--contacts {
     font-size: 18px;
@@ -554,7 +553,8 @@
       background-color: @modest-grey;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       background-color: @white;
       outline: 4px solid @modest-grey;
       outline-offset: -4px;
@@ -709,6 +709,17 @@
 
   &::placeholder {
     color: @black;
+  }
+
+  &:hover {
+    background-color: @modest-grey;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @white;
+    outline: 4px solid @modest-grey;
+    outline-offset: -4px;
   }
 
   @media (max-width: @mobile-width-only) {
