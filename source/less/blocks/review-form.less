@@ -5,11 +5,12 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
-    min-height: 1486px;
+
     background-color: @white;
     display: flex;
     flex-wrap: wrap;
     width: 84.4vw;
+    margin-top: 87px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -45,7 +46,6 @@
       background-color: @modest-grey;
     }
 
-
     &--contacts:before {
       position: absolute;
       content: "";
@@ -59,7 +59,6 @@
     &--impression {
       margin-bottom: 8px;
     }
-
 
     &--impression:before {
       position: absolute;
@@ -97,13 +96,22 @@
     margin-right: 0;
     margin-left: 0;
     padding: 0;
-
+outline: 1px solid red;
+outline-offset: -1px;
     &--impression {
       order: -1;
     }
 
     &--half {
       width: 42.2vw;
+    }
+
+    &--contacts {
+      margin-top: 53px;
+    }
+
+    &--attractions {
+      margin-top: 49px;
     }
   }
 
@@ -166,8 +174,32 @@
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    text-align: center;
     text-transform: uppercase;
+
+    &--person {
+      margin-left: 7.2vw;
+      margin-bottom: 54px;
+      text-align: left;
+    }
+
+    &--impression {
+      margin-bottom: 72px;
+      padding-left: 0;
+      text-align: left;
+    }
+
+    &--contacts {
+      margin-bottom: 20px;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    &--attractions {
+      margin-bottom: 59px;
+      padding-left: 0;
+      text-align: center;
+      width: 41.54vw;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -214,6 +246,30 @@
 
     &--email {
       margin-left: 22px;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+
+    &--name {
+      margin-left: 7.6vw;
+    }
+
+    &--surname {
+      margin-left: 7.6vw;
+    }
+
+    &--patronymic {
+      margin-left: 7.6vw;
+    }
+
+    &--phone {
+      margin-left: 2.9vw;
+    }
+
+    &--email {
+      margin-left: 2.8vw;
+      margin-top: 1px;
     }
   }
 }
@@ -291,30 +347,47 @@
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     &--name {
-      width: 28.2vw;
-      height: 58px;
+      width: calc(30vw - 37px);
+      height: 55px;
       margin-bottom: 20px;
+      margin-left: 1.1vw;
+      padding-top: 3px;
+      padding-left: 3vw;
     }
 
     &--surname {
-      width: 23.2vw;
-      height: 58px;
+      width: calc(30vw - 75px);
+      height: 55px;
       margin-bottom: 20px;
+      margin-left: 1.3vw;
+      padding-top: 3px;
+      padding-left: 2.9vw;
     }
 
     &--patronymic {
-      width: 23.2vw;
-      height: 58px;
+      width: calc(30vw - 72px);
+      height: 55px;
+      margin-bottom: 20px;
+      margin-left: 1.6vw;
+      padding-top: 3px;
+      padding-left: 2.8vw;
     }
 
     &--phone {
-      width: 55.5vw;
-      height: 58px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      flex-grow: 1;
+      height: 55px;
+      padding-top: 3px;
+      padding-left: 2.8vw;
     }
 
     &--email {
-      width: 55.5vw;
-      height: 58px;
+      margin-top: 7px;
+      flex-grow: 1;
+      height: 55px;
+      padding-top: 3px;
+      padding-left: 2.8vw;
     }
   }
 
@@ -349,6 +422,7 @@
 }
 
 .review-form__text {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -369,7 +443,6 @@
     padding-right: 23px;
     padding-bottom: 13px;
     padding-left: 21px;
-    word-spacing: -0.23em;
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
@@ -469,12 +542,25 @@
 }
 
 .review-form__response-wrapper {
-  margin-bottom: 43px;
-  margin-left: 78px;
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 43px;
+    margin-left: 78px;
 
-  &:last-child {
-    margin-bottom: 27px;
+    &:last-child {
+      margin-bottom: 27px;
+    }
   }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-bottom: 52px;
+    margin-left: calc(56px + 2.5vw);
+
+    &:last-child {
+      margin-bottom: 27px;
+    }
+  }
+
+
 }
 
 .review-form__input--response {
@@ -496,6 +582,10 @@
       background-color: @light-grey-info;
       top: -17px;
       left: -78px;
+
+      @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+        left: calc(-56px - 2.5vw);
+      }
     }
 
     &:hover::before {
@@ -545,6 +635,10 @@
   background-color: @dark-grey;
   top: 1px;
   left: -60px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    left: calc(-38px - 2.5vw);
+  }
 }
 
 .review-form__input--response:checked ~ .review-form__label--response:active::after {
@@ -552,11 +646,21 @@
 }
 
 .review-form__attractions-wrapper {
-  margin-bottom: 54px;
-  margin-left: 79px;
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 54px;
+    margin-left: 79px;
+  outline: 1px solid green;
+  outline-offset: -1px;
 
-  &:last-child {
-    margin-bottom: 14px;
+    &:last-child {
+      margin-bottom: 14px;
+    }
+  }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-bottom: 62px;
+    margin-left: 11.7vw;
+    width: 30%;
   }
 }
 
@@ -581,4 +685,16 @@
 .review-form__input--attractions:checked ~ .review-form__label--attractions:active::after {
   opacity: 0.3;
 }
+
+.review-form__attractions-options {
+      @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 11.1vw;
+
+      }
+    }
 
