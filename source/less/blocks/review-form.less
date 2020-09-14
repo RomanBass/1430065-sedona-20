@@ -1,22 +1,267 @@
 .review-form {
   @media (max-width: @mobile-width-only) {
-    min-height: 1659px;
-    background-color: rgba(255, 0, 0, 0.2);
+    min-height: 1671px;
+    background-color: @white;
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
-    min-height: 1486px;
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: @white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 84.4vw;
+    margin-top: 87px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 1273px;
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: @white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    margin-top: 59px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
   }
 }
 
 .review-form__fieldset {
   border: none;
+  display: block;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 36px;
+    margin-left: 8px;
+
+    &--person::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -20px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
+
+    &--contacts::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -21px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
+
+    &--impression {
+      margin-bottom: 8px;
+    }
+
+    &--impression::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -21px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
+
+    &--attractions::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -16px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
+
+    &--emotions::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -21px;
+      left: -8px;
+      background-color: @modest-grey;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 84.4vw;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+
+    &--person {
+      position: relative;
+    }
+
+    &--person::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 292px;
+      background-color: @modest3-grey;
+      top: 2px;
+      left: -1px;
+    }
+
+    &--impression {
+      order: -1;
+    }
+
+    &--half {
+      width: 42.2vw;
+    }
+
+    &--contacts {
+      margin-top: 53px;
+      position: relative;
+    }
+
+    &--contacts::before,
+    &--contacts::after {
+      position: absolute;
+      content: "";
+      width: calc(33.7vw - 136px);
+      height: 1px;
+      background-color: @modest3-grey;
+      top: 9px;
+    }
+
+    &--contacts::after {
+      right: 0;
+    }
+
+    &--attractions {
+      position: relative;
+      margin-top: 49px;
+    }
+
+    &--attractions::before,
+    &--attractions::after {
+      position: absolute;
+      content: "";
+      width: calc(33.7vw - 136px);
+      height: 1px;
+      background-color: @modest3-grey;
+      top: 26px;
+    }
+
+    &--attractions::after {
+      right: 0;
+    }
+
+    &--emotions {
+      position: relative;
+      margin-top: 23px;
+    }
+
+    &--emotions::before,
+    &--emotions::after {
+      position: absolute;
+      content: "";
+      width: calc(33.7vw - 136px);
+      height: 1px;
+      background-color: @modest3-grey;
+      top: 9px;
+    }
+
+    &--emotions::after {
+      right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+
+    &--person {
+      position: relative;
+    }
+
+    &--person::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 292px;
+      background-color: @modest3-grey;
+      top: 2px;
+      left: 0;
+    }
+
+    &--impression {
+      order: -1;
+    }
+
+    &--half {
+      width: 480px;
+    }
+
+    &--contacts {
+      position: relative;
+      margin-top: 51px;
+      margin-bottom: 32px;
+    }
+
+    &--contacts::before,
+    &--contacts::after {
+      position: absolute;
+      content: "";
+      width: 280px;
+      height: 1px;
+      background-color: @modest3-grey;
+      top: 9px;
+    }
+
+    &--contacts::after {
+      right: 0;
+    }
+
+    &--attractions {
+      position: relative;
+      margin-bottom: 82px;
+    }
+
+    &--attractions::before,
+    &--attractions::after {
+      position: absolute;
+      content: "";
+      width: 280px;
+      height: 1px;
+      background-color: @modest3-grey;
+      top: 26px;
+    }
+
+    &--attractions::after {
+      right: 0;
+    }
+
+    &--emotions {
+      position: relative;
+    }
+
+    &--emotions::before,
+    &--emotions::after {
+      position: absolute;
+      content: "";
+      width: 280px;
+      height: 1px;
+      background-color: @modest3-grey;
+      top: 10px;
+    }
+
+    &--emotions::after {
+      right: 0;
+    }
+  }
 }
 
 .review-form__legend {
@@ -26,15 +271,74 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+    margin-left: auto;
+
+    &--person {
+      padding-top: 1px;
+      padding-right: 8px;
+      margin-bottom: 13px;
+    }
+
+    &--contacts {
+      padding-right: 7px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+
+    &--impression {
+      padding-right: 8px;
+      margin-bottom: 31px;
+    }
+
+    &--attractions {
+      padding-right: 9px;
+      margin-bottom: 31px;
+    }
+
+    &--emotions {
+      padding-right: 6px;
+      margin-bottom: 9px;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    text-align: center;
     text-transform: uppercase;
+
+    &--person {
+      margin-left: 7.2vw;
+      margin-bottom: 54px;
+      text-align: left;
+    }
+
+    &--impression {
+      margin-bottom: 72px;
+      padding-left: 0;
+      text-align: left;
+    }
+
+    &--contacts {
+      margin-bottom: 20px;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    &--attractions {
+      margin-bottom: 59px;
+      padding-left: 0;
+      text-align: center;
+      width: 270px;
+    }
+
+    &--emotions {
+      margin-bottom: 54px;
+      padding-left: 0;
+      text-align: center;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -43,10 +347,47 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+
+    &--person {
+      margin-left: 78px;
+      margin-bottom: 54px;
+      text-align: left;
+    }
+
+    &--impression {
+      margin-bottom: 72px;
+      margin-left: 78px;
+      text-align: left;
+    }
+
+    &--contacts {
+      margin-bottom: 71px;
+      text-align: center;
+    }
+
+    &--attractions {
+      width: 270px;
+      margin-bottom: 59px;
+      text-align: center;
+    }
+
+    &--emotions {
+      margin-bottom: 55px;
+      text-align: center;
+    }
+  }
+}
+
+.review-form__contacts-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-left: -93px;
   }
 }
 
 .review-form__label {
+  position: relative;
+
   &--contacts {
     font-size: 14px;
     line-height: 24px;
@@ -55,28 +396,310 @@
     text-transform: uppercase;
   }
 
-  &--responce {
+  &--response,
+  &--attractions {
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
   }
+
+  @media (max-width: @mobile-width-only) {
+    &--name {
+      margin-right: 10px;
+    }
+
+    &--surname {
+      margin-right: 11px;
+    }
+
+    &--patronymic {
+      margin-right: 13px;
+    }
+
+    &--phone {
+      margin-left: 23px;
+    }
+
+    &--email {
+      margin-left: 22px;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    &--name {
+      margin-left: 7.6vw;
+    }
+
+    &--surname {
+      margin-left: 7.6vw;
+    }
+
+    &--patronymic {
+      margin-left: 7.6vw;
+    }
+
+    &--phone {
+      margin-left: 2.9vw;
+    }
+
+    &--email {
+      margin-left: 2.8vw;
+      margin-top: 1px;
+    }
+  }
+
+  &--response {
+    outline: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: @light-grey-info;
+      top: -17px;
+      left: -78px;
+
+      @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+        left: calc(-56px - 2.5vw);
+      }
+
+      @media (min-width: @desktop-width) {
+        left: -75px;
+      }
+    }
+
+    &:hover::before {
+      background-color: @modest-grey;
+    }
+
+    &:active::before {
+      background-color: @grey-soft-light;
+    }
+  }
+
+  &--attractions {
+    outline: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 46px;
+      height: 46px;
+      border: 5px solid @light-grey-info;
+      border-radius: 5px;
+      background-color: @light-grey-info;
+      top: -17px;
+      left: -80px;
+    }
+
+    &:hover::before {
+      background-color: @modest-grey;
+      border: 5px solid @modest-grey;
+    }
+
+    &:active::before {
+      background-color: @grey-soft-light;
+      border: 5px solid @grey-soft-light;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--name {
+      margin-left: 80px;
+    }
+
+    &--surname {
+      margin-left: 80px;
+    }
+
+    &--patronymic {
+      margin-left: 80px;
+    }
+
+    &--phone {
+      padding-top: 19px;
+    }
+
+    &--email {
+      padding-top: 19px;
+      margin-left: 79px;
+    }
+
+    &--attractions-last {
+      margin-right: 4px;
+    }
+  }
 }
 
 .review-form__input {
+  padding: 0;
+
   &--contacts {
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
+    padding-left: 5px;
     border: none;
     background-color: @light-grey-info;
 
     &::placeholder {
+      font-family: "PT Sans", "Arial", sans-serif;
       color: @black;
+    }
+
+    &:hover {
+      background-color: @modest-grey;
+    }
+
+    &:active,
+    &:focus {
+      background-color: @white;
+      outline: 4px solid @modest-grey;
+      outline-offset: -4px;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &--name {
+      width: 208px;
+      height: 53px;
+      padding-top: 5px;
+      padding-left: 22px;
+      margin-bottom: 20px;
+    }
+
+    &--surname {
+      width: 170px;
+      height: 53px;
+      padding-top: 5px;
+      padding-left: 22px;
+      margin-bottom: 20px;
+    }
+
+    &--patronymic {
+      width: 172px;
+      height: 53px;
+      padding-top: 5px;
+      padding-left: 22px;
+    }
+
+    &--phone {
+      width: 200px;
+      height: 53px;
+      margin-top: 10px;
+      margin-bottom: 14px;
+      padding-top: 5px;
+      padding-left: 22px;
+    }
+
+    &--email {
+      width: 200px;
+      height: 53px;
+      margin-top: 7px;
+      margin-bottom: 3px;
+      padding-top: 5px;
+      padding-left: 22px;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    &--name {
+      width: calc(30vw - 37px);
+      height: 55px;
+      margin-bottom: 20px;
+      margin-left: 1.1vw;
+      padding-top: 3px;
+      padding-left: 3vw;
+    }
+
+    &--surname {
+      width: calc(30vw - 75px);
+      height: 55px;
+      margin-bottom: 20px;
+      margin-left: 1.3vw;
+      padding-top: 3px;
+      padding-left: 2.9vw;
+    }
+
+    &--patronymic {
+      width: calc(30vw - 72px);
+      height: 55px;
+      margin-bottom: 20px;
+      margin-left: 1.6vw;
+      padding-top: 3px;
+      padding-left: 2.8vw;
+    }
+
+    &--phone {
+      margin-top: 10px;
+      margin-bottom: 25px;
+      flex-grow: 1;
+      height: 55px;
+      padding-top: 3px;
+      padding-left: 2.8vw;
+    }
+
+    &--email {
+      margin-top: 7px;
+      flex-grow: 1;
+      height: 55px;
+      padding-top: 3px;
+      padding-left: 2.8vw;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--name {
+      width: 328px;
+      height: 55px;
+      margin-bottom: 20px;
+      margin-left: 9px;
+      padding-top: 3px;
+      padding-left: 22px;
+    }
+
+    &--surname {
+      width: 290px;
+      height: 55px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      padding-top: 3px;
+      padding-left: 22px;
+    }
+
+    &--patronymic {
+      width: 292px;
+      height: 55px;
+      margin-bottom: 20px;
+      margin-left: 13px;
+      padding-top: 3px;
+      padding-left: 21px;
+    }
+
+    &--phone {
+      width: 236px;
+      height: 55px;
+      margin-bottom: 20px;
+      margin-left: 17px;
+      padding-top: 3px;
+      padding-left: 21px;
+    }
+
+    &--email {
+      width: 236px;
+      height: 55px;
+      margin-bottom: 20px;
+      margin-left: 18px;
+      padding-top: 3px;
+      padding-left: 22px;
     }
   }
 }
 
 .review-form__text {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -87,10 +710,225 @@
   &::placeholder {
     color: @black;
   }
+
+  &:hover {
+    background-color: @modest-grey;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @white;
+    outline: 4px solid @modest-grey;
+    outline-offset: -4px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    width: 235px;
+    min-height: 134px;
+    margin: 0 auto;
+    margin-bottom: 1px;
+    padding-top: 13px;
+    padding-right: 23px;
+    padding-bottom: 13px;
+    padding-left: 21px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: calc(84.4vw - 42px);
+    min-height: 129px;
+    margin: 0 auto;
+    padding-top: 18px;
+    padding-right: 21px;
+    padding-bottom: 13px;
+    padding-left: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 918px;
+    min-height: 129px;
+    margin: 0 auto;
+    padding-top: 18px;
+    padding-right: 21px;
+    padding-bottom: 13px;
+    padding-left: 21px;
+  }
+}
+
+.review-form__input-wrapper {
+  display: flex;
+}
+
+.review-form__icon-wrapper {
+  width: 58px;
+  height: 58px;
+  background-color: @modest2-grey;
+
+  &--phone {
+    margin-top: 10px;
+    margin-bottom: 14px;
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+    }
+  }
+
+  &--email {
+    margin-top: 7px;
+    margin-bottom: 3px;
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+    }
+  }
+}
+
+.review-form__icon {
+  display: block;
+
+  &--phone {
+    margin-top: 20px;
+    margin-left: 21px;
+  }
+
+  &--email {
+    margin-top: 21px;
+    margin-left: 21px;
+  }
+}
+
+.review-form__response-wrapper {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 43px;
+    margin-left: 78px;
+
+    &:last-child {
+      margin-bottom: 27px;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-bottom: 52px;
+    margin-left: calc(56px + 2.5vw);
+
+    &:last-child {
+      margin-bottom: 27px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
+    margin-left: 79px;
+
+    &:last-child {
+      margin-bottom: 27px;
+    }
+  }
+}
+
+.review-form__input--response {
+  display: none;
+}
+
+.review-form__input--response:checked ~ .review-form__label--response::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid @dark-grey;
+  border-radius: 50%;
+  background-color: @dark-grey;
+  top: 1px;
+  left: -60px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    left: calc(-38px - 2.5vw);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -57px;
+  }
+}
+
+.review-form__input--response:checked ~ .review-form__label--response:active::after {
+  opacity: 0.3;
+}
+
+.review-form__attractions-wrapper {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 54px;
+    margin-left: 79px;
+
+    &:last-child {
+      margin-bottom: 14px;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    margin-bottom: 62px;
+    margin-left: 11.7vw;
+    width: 30%;
+  }
+}
+
+.review-form__input--attractions {
+  display: none;
+}
+
+.review-form__input--attractions:checked ~ .review-form__label--attractions::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 10px;
+  transform: rotate(-45deg);
+  border: 3px solid @dark-grey;
+  border-top-style: none;
+  border-right-style: none;
+  background-color: transparent;
+  top: 1px;
+  left: -62px;
+}
+
+.review-form__input--attractions:checked ~ .review-form__label--attractions:active::after {
+  opacity: 0.3;
+}
+
+.review-form__attractions-options {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 11.1vw;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+  }
+}
+
+.review-form__submit-wrapper {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+    margin-bottom: 61px;
+    width: 84.4vw;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+    margin-bottom: 65px;
+    width: 960px;
+  }
 }
 
 .review-form__submit {
   display: block;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 400;
@@ -101,4 +939,45 @@
   background-color: @blue;
   border: none;
   cursor: pointer;
+
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+    height: 58px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 42.2vw;
+    height: 58px;
+    padding-top: 7px;
+    padding-right: 2.8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+    height: 58px;
+    padding-top: 7px;
+  }
+}
+
+.review-form__remark {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 160px;
+    padding-top: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+    margin-right: 1px;
+  }
 }
