@@ -10,6 +10,13 @@
       color: @black;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    &--correct {
+      background: linear-gradient(to bottom, @white 201px, @light-grey2 201px);
+      color: @black;
+    }
+  }
 }
 
 .modal__title {
@@ -33,7 +40,7 @@
     }
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  @media (min-width: @tablet-width) {
     &--error {
       font-size: 30px;
       line-height: 40px;
@@ -47,12 +54,12 @@
     }
 
     &--correct {
-      font-size: 18px;
-      line-height: 26px;
+      font-size: 30px;
+      line-height: 40px;
       font-weight: 700;
       text-transform: uppercase;
       text-align: center;
-      padding-top: 24px;
+      padding-top: 18px;
     }
   }
 }
@@ -85,7 +92,7 @@
     }
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  @media (min-width: @tablet-width) {
     &--error {
       font-size: 14px;
       line-height: 24px;
@@ -108,7 +115,7 @@
       margin-right: auto;
       margin-left: auto;
       margin-bottom: 58px;
-      width: 230px;
+      width: 100%;
     }
   }
 }
@@ -147,6 +154,38 @@
       margin-left: auto;
       padding-top: 5px;
       width: 280px;
+      height: 58px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--error {
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 21px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 38px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 5px;
+      width: 272px;
+      height: 58px;
+    }
+
+    &--correct {
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 21px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 22px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 7px;
+      width: 458px;
       height: 58px;
     }
   }

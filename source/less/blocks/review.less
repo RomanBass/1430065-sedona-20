@@ -40,8 +40,6 @@
 .review__modal {
   position: fixed;
   z-index: 1;
-outline: 1px solid red;
-outline-offset: -1px;
 
   @media (max-width: @mobile-width-only) {
     box-shadow: 0 10px 10px @grey;
@@ -60,7 +58,7 @@ outline-offset: -1px;
     }
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  @media (min-width: @tablet-width) {
     box-shadow: 0 10px 10px @grey;
     &--error {
       width: 400px;
@@ -70,10 +68,10 @@ outline-offset: -1px;
     }
 
     &--correct {
-      width: 320px;
-      min-height: 323px;
-      top: calc((100% - 323px) / 2);
-      left: calc((100% - 320px) / 2);
+      width: 640px;
+      min-height: 347px;
+      top: calc((100% - 347px) / 2);
+      left: calc((100% - 640px) / 2);
     }
   }
 }
