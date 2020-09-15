@@ -1,7 +1,9 @@
 .reason__header--first {
   position: relative;
   padding-top: 55px;
-  min-height: 171px;
+  padding-bottom: 20px;
+  width: 320px;
+  min-height: 151px;
   background-color: @blue;
   color: @white;
   text-align: center;
@@ -12,6 +14,7 @@
     width: 33.33%;
     margin: 0 auto;
     padding: 0;
+    padding-bottom: 30px;
   }
 }
 
@@ -27,7 +30,9 @@
 
 .reason__header--second {
   padding-top: 26px;
-  min-height: 165px;
+  padding-bottom: 20px;
+  width: 320px;
+  min-height: 145px;
   background-color: @blue;
   color: @white;
   text-align: center;
@@ -37,12 +42,14 @@
     width: 33.33%;
     margin: 0 auto;
     padding: 0;
+    padding-bottom: 30px;
   }
 }
 
 .reason__header--grey {
   padding-top: 12px;
-  min-height: 156px;
+  padding-bottom: 13px;
+  min-height: 143px;
   background-color: @light-grey;
   color: @dark-grey;
   text-align: center;
@@ -150,6 +157,18 @@
   line-height: 21px;
 
   @media (max-width: @mobile-width-only) {
+    &--first {
+      margin-left: auto;
+      margin-right: auto;
+      width: 292px;
+    }
+
+    &--second {
+      margin-left: auto;
+      margin-right: auto;
+      width: 292px;
+    }
+
     &--grey-first {
       margin-left: auto;
       margin-right: auto;
@@ -234,21 +253,32 @@
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   &--desktop-first {
     @media (min-width: @desktop-width) {
       width: 100%;
-      margin-top: -68px;
-      margin-bottom: -76px;
+      position: absolute;
+      top: 8px;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }
 
   &--desktop-second {
     @media (min-width: @desktop-width) {
       width: 100%;
-      margin-top: -15px;
-      margin-bottom: -129px;
+      position: absolute;
+      top: 114px;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }
 }
@@ -257,6 +287,8 @@
   @media (min-width: @tablet-width) {
     width: 66.67%;
     overflow: hidden;
+    position: relative;
+    min-height: 256px;
   }
 }
 
