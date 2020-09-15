@@ -66,7 +66,7 @@ exports.default = gulp.series(
 
 const copy = () => {
   return gulp.src([
-      "source/fonts/**/*.{woff, woff2}",
+      "source/fonts/**/*.{woff,woff2}",
       "source/js/**",
       "source/*.ico"
   ], {

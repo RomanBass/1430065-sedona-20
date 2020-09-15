@@ -1,0 +1,192 @@
+.modal {
+  &--error {
+    background-color: @white;
+    color: @black;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &--correct {
+      background: linear-gradient(to bottom, @white 225px, @light-grey2 225px);
+      color: @black;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--correct {
+      background: linear-gradient(to bottom, @white 201px, @light-grey2 201px);
+      color: @black;
+    }
+  }
+}
+
+.modal__title {
+  @media (max-width: @mobile-width-only) {
+    &--error {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 27px;
+    }
+
+    &--correct {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 24px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--error {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 25px;
+      width: 235px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &--correct {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 18px;
+    }
+  }
+}
+
+.modal__info {
+  @media (max-width: @mobile-width-only) {
+    &--error {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 26px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 230px;
+    }
+
+    &--correct {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 26px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 58px;
+      width: 230px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--error {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 0;
+      margin-right: auto;
+      margin-left: auto;
+      width: 300px;
+    }
+
+    &--correct {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 26px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 58px;
+      width: 100%;
+    }
+  }
+}
+
+.modal__close {
+  background-color: @blue;
+  border: none;
+  color: @white;
+  display: block;
+  cursor: pointer;
+
+  @media (max-width: @mobile-width-only) {
+    &--error {
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 22px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 180px;
+      height: 58px;
+    }
+
+    &--correct {
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 22px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 5px;
+      width: 280px;
+      height: 58px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--error {
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 21px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 38px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 5px;
+      width: 272px;
+      height: 58px;
+    }
+
+    &--correct {
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 21px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 22px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 7px;
+      width: 458px;
+      height: 58px;
+    }
+  }
+}
