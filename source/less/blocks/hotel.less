@@ -87,6 +87,19 @@
   margin-right: auto;
   margin-left: auto;
 
+  &:hover {
+    background-color: @dark-blue;
+  }
+
+  &:active {
+    background-color: @darkest-blue;
+    outline: none;
+  }
+
+  &--disabled {
+    background-color: @modest-grey;
+  }
+
   @media (max-width: @mobile-width-only) {
     width: 280px;
     margin-bottom: 49px;
@@ -113,6 +126,10 @@
   text-transform: uppercase;
   color: @white;
   width: 100%;
+
+  &:active {
+    color: @white-opacitive03;
+  }
 }
 
 .hotel__map {

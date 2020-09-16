@@ -58,10 +58,6 @@ const watcher = () => {
 gulp.watch("source/*.html").on("change", () => {htmlMinify(); sync.reload()});
 }
 
-exports.default = gulp.series(
-  styles, server, watcher
-);
-
 // Copy Files
 
 const copy = () => {
@@ -144,3 +140,7 @@ const build = gulp.series(
 );
 
 exports.build = build;
+
+exports.default = gulp.series(
+  build, server, watcher
+);

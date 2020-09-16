@@ -943,10 +943,24 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
+  color: @white;
   background-color: @blue;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: @dark-blue;
+  }
+
+  &:active {
+    background-color: @darkest-blue;
+    color: @white-opacitive03;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: @modest-grey;
+  }
 
   @media (max-width: @mobile-width-only) {
     width: 280px;
